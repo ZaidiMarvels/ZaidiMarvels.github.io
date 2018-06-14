@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trial</title>
+    <link href="css/reset.css" rel="stylesheet"  />
+    <link  href="css/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/themef5f1.css?v=1528190971" rel="stylesheet" id="theme-style-css" />
+    <link href="css/theme.update6cd1.css?v=1.12.0" rel="stylesheet" id="theme-style-update-css" />
+   
+    <script src="js/uikit.min6cd1.js?v=1.12.0"></script>
+    <script src="js/uikit-icons-morgan-consulting.min6cd1.js?v=1.12.0"></script>
+    <script src="js/theme6cd1.js?v=1.12.0"></script>
+    <script src="js/mixitup.min.js" ></script>
+</head>
+<body>
+    <div class="controls">
+        <button type="button" class="control" data-filter="all">All</button>
+        <button type="button" class="control" data-filter=".green">Green</button>
+        <button type="button" class="control" data-filter=".blue">Blue</button>
+        <button type="button" class="control" data-filter=".pink">Pink</button>
+        <button type="button" class="control" data-filter="none">None</button>
+
+        
+    </div>
+
+    <div class="container">
+           <div class="uk-child-width-1-6@s uk-grid-collapse uk-text-center uk-padding" uk-grid>
+        <div>
+            <div class="uk-tile uk-tile-default">
+
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-tile-muted uk-tile-i uk-padding-small mix green" style="height: 150px; padding-top:40px; background: #000;">
+                <img src="img/logos/chof.png" alt="Chofa logo" height="50" width="50" >
+                <div class="uk-h6 uk-margin-remove-top" style="color:#fff;">Chofa</div>
+            
+
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-tile-muted  uk-padding-small mix blue"  style="height: 150px; padding-top:40px; ">
+                <img src="img/logos/pos_zaidi.png" alt="Chofa logo" height="50" width="50">
+                <div class="uk-h6 uk-margin-remove-top">ZaidiPOS</div>
+                
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-tile-muted  uk-padding-small mix pink"  style="height: 150px; padding-top:40px; background: #32D1E4;">
+                <img src="img/logos/cspace.png" alt="Chofa logo" height="50" width="50">
+                <div class="uk-h6 uk-margin-remove-top" style="color:#fff;">CSpace</div>
+                
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-tile-muted  uk-padding-small mix blue"  style="height: 150px; padding-top:40px;">
+                <img src="img/logos/license.png" alt="Chofa logo" height="50" width="50">
+                <div class="uk-h6 uk-margin-remove-top">ZLicense </div>
+            
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+        <script>
+            var containerEl = document.querySelector('.container');
+
+            var mixer = mixitup(containerEl);
+        </script>
+</body>
+</html>

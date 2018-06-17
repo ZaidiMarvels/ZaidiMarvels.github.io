@@ -12,9 +12,10 @@
         <meta name="author" content="" />
         <meta name="generator" content="" />
         <title>Zaidi P O S :: Home</title>
+        <link href="css/style.css" rel="stylesheet" />
         <link href="css/themef5f1.css?v=1528190971" rel="stylesheet" id="theme-style-css" />
         <link href="css/theme.update6cd1.css?v=1.12.0" rel="stylesheet" id="theme-style-update-css" />
-
+    
 
         <style type="text/css">
                 .bg1 {
@@ -53,6 +54,19 @@
 </head>
 
 <body class="">
+                <div class="spinner-wrapper">
+                                <div class="sk-cube-grid">
+                                        <div class="sk-cube sk-cube1"></div>
+                                        <div class="sk-cube sk-cube2"></div>
+                                        <div class="sk-cube sk-cube3"></div>
+                                        <div class="sk-cube sk-cube4"></div>
+                                        <div class="sk-cube sk-cube5"></div>
+                                        <div class="sk-cube sk-cube6"></div>
+                                        <div class="sk-cube sk-cube7"></div>
+                                        <div class="sk-cube sk-cube8"></div>
+                                        <div class="sk-cube sk-cube9"></div>
+                                      </div>
+                            </div>
 
         <div class="uk-offcanvas-content">
 
@@ -322,7 +336,7 @@
                                                                                                                             </video>
                                                                                                     <div class="uk-overlay uk-overlay-primary uk-position-top uk-text-center uk-transition-slide-top">
                                                                                                         <h3 class="uk-margin-remove">Getting Started</h3>
-                                                                                                        <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                                                        <p class="uk-margin-remove">Have a look at  this video to get started with ZaidiPOS.</p>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </li>
@@ -608,9 +622,9 @@
                                                                                         <div class="uk-background-muted uk-padding ">
                                                                                                 <div class="uk-h4 uk-text-bold">Step 2</div>
                                                                                                 <ol class="uk-list uk-list-bullet uk-text-left">
-                                                                                                        <li>Select Ultimate plan </li>
-                                                                                                        <li>Provide your email address
-                                                                                                                and phone number</li>
+                                                                                                        <li>Select <strong><em>Ultimate plan</em></strong> </li>
+                                                                                                        <li>Provide your <strong><em>email address</em></strong>
+                                                                                                                and <strong><em>phone number</em></strong></li>
                                                                                                         <li> Then submit to get license
                                                                                                                 file and product key (Internet connection required)</li>
                                                                                                 </ol>
@@ -1338,16 +1352,31 @@
                 </div>
         </div>
         </div>
-        <script src="js/uikit.min6cd1.js?v=1.12.0"></script>
-        <script src="js/uikit-icons-morgan-consulting.min6cd1.js?v=1.12.0"></script>
-        <script src="js/theme6cd1.js?v=1.12.0"></script>
+        <script src="js/jquery-2.2.4.min.js"></script>
         <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                        Array.prototype.slice.call(document.querySelectorAll('a span[id^="cloak"]')).forEach(function (span) {
-                                span.innerText = span.textContent;
-                        });
+                $(document).ready(function() {
+                //Preloader
+                $(window).on("load", function() {
+                preloaderFadeOutTime = 500;
+                function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+                }
+                hidePreloader();
                 });
-        </script>
+                });
+                </script>
+                    <script src="js/uikit.min6cd1.js?v=1.12.0"></script>
+                    <script src="js/uikit-icons.min6cd1.js?v=1.12.0"></script>
+                    <script src="js/theme6cd1.js?v=1.12.0"></script>
+                   
+                    <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                            Array.prototype.slice.call(document.querySelectorAll('a span[id^="cloak"]')).forEach(function (span) {
+                                                    span.innerText = span.textContent;
+                                            });
+                                    });
+                            </script>
 </body>
 
 </html>

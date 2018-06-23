@@ -194,7 +194,7 @@
                                                                                         <a class=" uk-button uk-button-primary" href="#price" style="border: 1px solid FE6708; background: #FE6708 !important;" uk-scroll>
                                                                                                 Get Started
                                                                                         </a>
-                                                                                        <a id="btnDownload" class=" uk-button uk-button-primary" href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8" style="border: 1px solid #00C73D; background:#00C73D !important;"
+                                                                                        <a onclick="incrementCount" class=" uk-button uk-button-primary" href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8" style="border: 1px solid #00C73D; background:#00C73D !important;"
                                                                                                 >
                                                                                                 Download Free Trial
                                                                                         </a>
@@ -1387,15 +1387,19 @@
             messagingSenderId: "513336586105"
           };
           firebase.initializeApp(config);
-            const btnDownload = document.getElementById('btnDownload');
-        btnDownload.addEventListener('click', e => {
-            var ref = firebase.database().ref();
+
+          function incrementCount(){
+                var ref = firebase.database().ref();
             var addCount = ref.child("count").child("Value");
             addCount.transaction(function(Value) {
                 return Value +1;
             });
+          }
+        //     const btnDownload = document.getElementById('btnDownload');
+        // btnDownload.addEventListener('click', e => {
+            
         
-        });
+        // });
         setInterval(()=>{
     // getting the value
     var countRef = firebase.database().ref('count').once('value').then(function(snapshot){

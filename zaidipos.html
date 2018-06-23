@@ -195,7 +195,7 @@
                                                                                                 Get Started
                                                                                         </a>
                                                                                         <a id="btnDownload" class=" uk-button uk-button-primary" href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8" style="border: 1px solid #00C73D; background:#00C73D !important;"
-                                                                                                uk-scroll>
+                                                                                                >
                                                                                                 Download Free Trial
                                                                                         </a>
                                                                                 </div>
@@ -1376,6 +1376,8 @@
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
         <script>
           // Initialize Firebase
+
+
           var config = {
             apiKey: "AIzaSyCGwYVGl21s7PG3RHOzzJGpzp6C9HGhaFc",
             authDomain: "zaidimarvels-d2e97.firebaseapp.com",
@@ -1394,12 +1396,14 @@
             });
         
         });
-        // getting the value
-        var countRef = firebase.database().ref('count').once('value').then(function(snapshot){
+        setInterval(()=>{
+    // getting the value
+    var countRef = firebase.database().ref('count').once('value').then(function(snapshot){
     var dtat = (snapshot.val().Value );
     document.getElementById("downloads").innerHTML = dtat;
     
         });
+},2000)
         
         </script>
       

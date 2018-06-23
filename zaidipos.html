@@ -445,11 +445,11 @@
                                                                                                         <li>Small Business Reporting</li>
                                                                                                 </ul>
                                                                                         </div>
-                                                                                        <a onclick="incrementCount"  class="uk-button uk-button-primary btnDownload" href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8"  style="background:#00C73D !important;">
+                                                                                        <a onclick="incrementCount"  class="uk-button uk-button-primary btnDownload1" href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8"  style="background:#00C73D !important;">
 
                                                                                                 Download for 32-bit </a> <br />
                                                                                                 or<br />
-                                                                                                <a onclick="incrementCount"  class="uk-button uk-button-primary btnDownload"  href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8" style="background:#00C73D !important;">
+                                                                                                <a onclick="incrementCount"  class="uk-button uk-button-primary btnDownload2"  href="https://drive.google.com/open?id=1j39nMdfU40T98Ot1vzEjkDwy6P-LV1x8" style="background:#00C73D !important;">
 
                                                                                                         Download for 64-bit </a>
                                                                                 </div>
@@ -1389,18 +1389,18 @@
           firebase.initializeApp(config);
 
           function incrementCount(){
-           
-          }
-            const btnDownload = document.querySelector(".btnDownload");;
-        btnDownload.addEventListener('click', e => {
                 var ref = firebase.database().ref();
             var addCount = ref.child("count").child("Value");
             addCount.transaction(function(Value) {
                 return Value +1;
             });
-            console.log("YADDA YADDA")
-        
-        });
+          }
+          const btnDownload = document.querySelector(".btnDownload");;
+          const btnDownload1 = document.querySelector(".btnDownload1");;
+          const btnDownload2 = document.querySelector(".btnDownload2");;
+          btnDownload.addEventListener('click', e => {incrementCount();});
+          btnDownload1.addEventListener('click', e => {incrementCount();});
+          btnDownload2.addEventListener('click', e => {incrementCount();});
         setInterval(()=>{
     // getting the value
     var countRef = firebase.database().ref('count').once('value').then(function(snapshot){
